@@ -1,19 +1,25 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
     <title>Users</title>
 </head>
 <body>
 
-    <ul>
+
         {% for user in users %}
-        <li>
-            <strong>{{ user.username }}</strong> <br>
-            E-mail: {{ user.e_mail }}
-        </li>
+        <a href="{% url 'get_visit' visit_id=user.id %}">
+         <div style="color: magenta"> Vārds: {{ user.username }}
+             E-mail: {{ user.e_mail }}
+             xxx: {{ user.xxx }}
+         </div><br>
+        </a>
         {% endfor %}
-    </ul>
+
 
 </body>
 </html>

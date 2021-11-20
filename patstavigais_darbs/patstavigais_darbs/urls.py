@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', insert_db.views.get_users),
     path('add-user', insert_db.views.add_user),
+    path('simple-user/<int:visit_id>', insert_db.views.get_visit, name='get_visit'),
+    path('filter', insert_db.views.filter),
+    path('filters', insert_db.views.filters),
 ]

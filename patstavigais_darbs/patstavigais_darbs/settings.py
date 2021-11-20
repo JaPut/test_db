@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'insert_db.apps.InsertDbConfig',
+    'patstavigais_darbs'
 ]
 
 MIDDLEWARE = [
